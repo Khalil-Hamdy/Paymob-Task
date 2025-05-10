@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    tools:context=".ui.movidetails.fragment.MovidetailsFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_350sdp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageMovie"
+            android:src="@color/black"
+            app:riv_corner_radius_bottom_left="@dimen/_10sdp"
+            app:riv_corner_radius_bottom_right="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/iconHeart"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_heart"
+            android:background="@drawable/ic_circle"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+
+        <ImageView
+            android:id="@+id/iconBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/ic_circle"
+            android:padding="@dimen/_5sdp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginBottom="@dimen/_5sdp"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_21ssp"
+            android:text="The Shawshan"
+            android:fontFamily="@font/sans_arabic_bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_goneMarginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/imageMovie"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHeaderRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:text="Rating"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/iconStar"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_star"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textHeaderDate"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_medium"
+            android:textColor="@color/black"
+            android:text="1994"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layout_constraintTop_toTopOf="@id/iconStar"
+            app:layout_constraintBottom_toBottomOf="@id/iconStar"
+            app:layout_constraintStart_toEndOf="@id/iconStar"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHeaderDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:text="Realese Date"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="end"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_medium"
+            android:textColor="@color/black"
+            android:text="1994"
+            android:gravity="end"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textHeaderDate"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/iconStar"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/line1"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHeaderOverView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Overview"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_goneMarginTop="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/line1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textOverView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_medium"
+            android:text="On the brink of destruction in the near future, a group of people constructs massive engines on the earth's surface to find a new home. However, the road out to the rest of the universe is perilous ."
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textHeaderOverView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/gray"
+            app:layout_constraintTop_toBottomOf="@id/textOverView"
+            android:layout_marginHorizontal="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:id="@+id/line2"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHeaderOriginalLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:text="Original Language"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textOriginalLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_medium"
+            android:textColor="@color/black"
+            android:text="en"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textHeaderOriginalLanguage"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textHeaderAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:text="Adult"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:gravity="end"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/line2"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textAdult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_medium"
+            android:textColor="@color/black"
+            android:text="false"
+            android:gravity="end"
+            android:layout_marginHorizontal="@dimen/_10sdp"
+            app:layout_constraintTop_toBottomOf="@id/textHeaderAdult"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

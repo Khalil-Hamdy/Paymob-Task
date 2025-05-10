@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/_15sdp"
+    app:cardBackgroundColor="@color/white"
+    app:cardUseCompatPadding="true"
+    android:clickable="true">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layoutDirection="ltr">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:scaleType="centerCrop"
+            android:id="@+id/imageMovie"
+            android:src="@color/black"
+            android:layout_margin="@dimen/_7sdp"
+            app:riv_corner_radius_top_left="@dimen/_10sdp"
+            app:riv_corner_radius_top_right="@dimen/_10sdp"
+            app:riv_corner_radius_bottom_left="@dimen/_10sdp"
+            app:riv_corner_radius_bottom_right="@dimen/_10sdp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_14ssp"
+            android:text="The Shawshan"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:maxLines="2"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iconHeart"
+            app:layout_constraintStart_toEndOf="@id/imageMovie"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_regular"
+            android:textColor="@color/black"
+            android:gravity="start"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:text="3.3"
+            app:layout_constraintTop_toTopOf="@id/iconStar"
+            app:layout_constraintBottom_toBottomOf="@id/iconStar"
+            app:layout_constraintStart_toStartOf="@id/textDate"
+            />
+
+        <ImageView
+            android:id="@+id/iconStar"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:src="@drawable/ic_star"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginHorizontal="@dimen/_5sdp"
+            app:layout_constraintTop_toBottomOf="@id/textTitle"
+            app:layout_constraintStart_toEndOf="@id/textRate"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_12ssp"
+            android:fontFamily="@font/sans_arabic_regular"
+            android:textColor="@color/black"
+            android:text="1994"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/iconStar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/textReleased"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textRate1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:text="Rating: "
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toTopOf="@id/iconStar"
+            app:layout_constraintBottom_toBottomOf="@id/iconStar"
+            app:layout_constraintStart_toEndOf="@id/imageMovie"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/textReleased"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11ssp"
+            android:fontFamily="@font/sans_arabic_semi_bold"
+            android:textColor="@color/black"
+            android:text="Released: "
+            android:layout_marginTop="@dimen/_5sdp"
+            android:gravity="start"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toBottomOf="@id/iconStar"
+            app:layout_constraintStart_toEndOf="@id/imageMovie"
+            />
+
+
+        <ImageView
+            android:id="@+id/iconHeart"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:src="@drawable/ic_heart"
+            android:layout_marginHorizontal="@dimen/_7sdp"
+            app:layout_constraintTop_toTopOf="@id/imageMovie"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.cardview.widget.CardView>
